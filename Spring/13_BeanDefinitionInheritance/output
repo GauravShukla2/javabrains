@@ -1,0 +1,14 @@
+1)
+
+Point A = (0, 20)
+Point B = (-20, 0)
+Point C = (20, 0)
+
+2)
+
+Point A = (0, 20)
+Point B = (-20, 0)
+Exception in thread "main" java.lang.NullPointerException
+	at com.gaurav.Triangle.draw(Triangle.java:36)
+	at com.gaurav.DrawingApp.main(DrawingApp.java:13)
+	
