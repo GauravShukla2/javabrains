@@ -1,0 +1,5 @@
+myInit() method called for Triangle
+Point A = (0, 20)
+Point B = (-20, 0)
+Point C = (20, 0)
+cleanUp() method called for Triangle
