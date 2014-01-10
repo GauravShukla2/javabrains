@@ -1,0 +1,6 @@
+Name: Circle name
+A method that takes String argument has been called. Value is dummy
+execution(void com.gaurav.aop.model.Circle.setName(String))
+Name: dummy
+execution(String com.gaurav.aop.model.Circle.getName())
+dummy
