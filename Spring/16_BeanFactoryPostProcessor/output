@@ -1,0 +1,13 @@
+My Bean Factory Post Processor called
+//Jan 05, 2014 12:17:57 AM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+//INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@c99e73: defining beans [triangle,pointA,pointB,pointC,com.gaurav.MyBeanFactoryPostProcessor#0]; root of factory hierarchy
+Point A = (0, 20)
+Point B = (-20, 0)
+Point C = (20, 0)
+
+
+
+
+
+
+
