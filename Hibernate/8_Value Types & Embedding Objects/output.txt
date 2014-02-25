@@ -1,0 +1,19 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: drop table if exists UserDetails
+Hibernate: create table UserDetails (userId integer not null auto_increment, city varchar(255), pincode varchar(255), state varchar(255), street varchar(255), userName varchar(255), primary key (userId))
+Hibernate: insert into UserDetails (city, pincode, state, street, userName) values (?, ?, ?, ?, ?)
+
+
+
++--------+-----------+---------+-------+--------+------------+
+| userId | city      | pincode | state | street | userName   |
++--------+-----------+---------+-------+--------+------------+
+|      1 | Hyderabad | NULL    | AP    | NULL   | First User |
++--------+-----------+---------+-------+--------+------------+
+
+
