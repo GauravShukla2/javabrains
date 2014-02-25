@@ -1,0 +1,33 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: drop table if exists USER_ADDRESS
+Hibernate: drop table if exists UserDetails
+Hibernate: create table USER_ADDRESS (USER_ID integer not null, CITY_NAME varchar(255), PIN_CODE varchar(255), STATE_NAME varchar(255), STREET_NAME varchar(255))
+Hibernate: create table UserDetails (userId integer not null auto_increment, userName varchar(255), primary key (userId))
+Hibernate: alter table USER_ADDRESS add index FK_rr7b0tc5khp6fevg5vf9ctn5 (USER_ID), add constraint FK_rr7b0tc5khp6fevg5vf9ctn5 foreign key (USER_ID) references UserDetails (userId)
+Hibernate: insert into UserDetails (userName) values (?)
+Hibernate: insert into USER_ADDRESS (USER_ID, CITY_NAME, PIN_CODE, STATE_NAME, STREET_NAME) values (?, ?, ?, ?, ?)
+Hibernate: insert into USER_ADDRESS (USER_ID, CITY_NAME, PIN_CODE, STATE_NAME, STREET_NAME) values (?, ?, ?, ?, ?)
+Hibernate: select userdetail0_.userId as userId1_1_0_, userdetail0_.userName as userName2_1_0_, listofaddr1_.USER_ID as USER1_1_2_, listofaddr1_.CITY_NAME as CITY2_0_2_, listofaddr1_.PIN_CODE as PIN3_0_2_, listofaddr1_.STATE_NAME as STATE4_0_2_, listofaddr1_.STREET_NAME as STREET5_0_2_ from UserDetails userdetail0_ left outer join USER_ADDRESS listofaddr1_ on userdetail0_.userId=listofaddr1_.USER_ID where userdetail0_.userId=?
+2
+
+
++--------+------------+
+| userId | userName   |
++--------+------------+
+|      1 | First User |
++--------+------------+
+
+
++---------+-----------+----------+------------+-------------+
+| USER_ID | CITY_NAME | PIN_CODE | STATE_NAME | STREET_NAME |
++---------+-----------+----------+------------+-------------+
+|       1 | Hyderabad | 500084   | AP         | NULL        |
+|       1 | Bangalore | 560068   | KA         | NULL        |
++---------+-----------+----------+------------+-------------+
+
+
