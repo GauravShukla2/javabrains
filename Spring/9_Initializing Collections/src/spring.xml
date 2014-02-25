@@ -9,11 +9,11 @@
 
 	<bean id="triangle" class="com.gaurav.Triangle">
 		<property name="points">
-		<list>
-			<ref bean="zeroPoint"/>
-			<ref bean="Point1"/>
-			<ref bean="Point2"/>
-		</list>
+			<list>
+				<ref bean="zeroPoint" />
+				<ref bean="Point1" />
+				<ref bean="Point2" />
+			</list>
 		</property>
 	</bean>
 
