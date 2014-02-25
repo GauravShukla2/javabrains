@@ -1,0 +1,37 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: insert into Vehicle (vehicleName) values (?)
+Hibernate: insert into Vehicle (vehicleName) values (?)
+Hibernate: insert into TwoWheeler (steeringHandle, vehicleId) values (?, ?)
+Hibernate: insert into Vehicle (vehicleName) values (?)
+Hibernate: insert into FourWheeler (steeringWheel, vehicleId) values (?, ?)
+
+
++-----------+-------------+
+| vehicleId | vehicleName |
++-----------+-------------+
+|         1 | Car         |
+|         2 | Bike        |
+|         3 | Porsche     |
++-----------+-------------+
+
+
++----------------------+-----------+
+| steeringHandle       | vehicleId |
++----------------------+-----------+
+| Bike steering handle |         2 |
++----------------------+-----------+
+
+
++-------------------------+-----------+
+| steeringWheel           | vehicleId |
++-------------------------+-----------+
+| Porsche steering handle |         3 |
++-------------------------+-----------+
+
+
+
