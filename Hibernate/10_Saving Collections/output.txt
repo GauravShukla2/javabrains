@@ -1,0 +1,29 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: drop table if exists UserDetails
+Hibernate: drop table if exists UserDetails_listOfAddresses
+Hibernate: create table UserDetails (userId integer not null auto_increment, userName varchar(255), primary key (userId))
+Hibernate: create table UserDetails_listOfAddresses (UserDetails_userId integer not null, CITY_NAME varchar(255), PIN_CODE varchar(255), STATE_NAME varchar(255), STREET_NAME varchar(255))
+Hibernate: alter table UserDetails_listOfAddresses add index FK_2mm8mt9al0vl4dbpk2ic2wnsc (UserDetails_userId), add constraint FK_2mm8mt9al0vl4dbpk2ic2wnsc foreign key (UserDetails_userId) references UserDetails (userId)
+Hibernate: insert into UserDetails (userName) values (?)
+Hibernate: insert into UserDetails_listOfAddresses (UserDetails_userId, CITY_NAME, PIN_CODE, STATE_NAME, STREET_NAME) values (?, ?, ?, ?, ?)
+Hibernate: insert into UserDetails_listOfAddresses (UserDetails_userId, CITY_NAME, PIN_CODE, STATE_NAME, STREET_NAME) values (?, ?, ?, ?, ?)
+
+
++--------+------------+
+| userId | userName   |
++--------+------------+
+|      1 | First User |
++--------+------------+
+
+
++--------------------+-----------+----------+------------+-------------+
+| UserDetails_userId | CITY_NAME | PIN_CODE | STATE_NAME | STREET_NAME |
++--------------------+-----------+----------+------------+-------------+
+|                  1 | Bangalore | 560068   | KA         | NULL        |
+|                  1 | Hyderabad | 500084   | AP         | NULL        |
++--------------------+-----------+----------+------------+-------------+
