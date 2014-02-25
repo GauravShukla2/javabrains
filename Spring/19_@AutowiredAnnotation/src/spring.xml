@@ -2,12 +2,8 @@
 <beans xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
-	
-<context:annotation-config/>
-	
-	<!-- <bean id="triangle" class="com.gaurav.Triangle"> <property name="pointA" 
-		ref="pointA" /> <property name="pointB" ref="pointB" /> <property name="pointC" 
-		ref="pointC" /> </bean> -->
+
+	<context:annotation-config />
 
 	<bean id="circle" class="com.gaurav.Circle">
 	</bean>
@@ -28,7 +24,8 @@
 		<property name="y" value="0" />
 	</bean>
 
-	
-<!-- 	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" /> -->
+
+	<!-- <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" 
+		/> -->
 
 </beans>
