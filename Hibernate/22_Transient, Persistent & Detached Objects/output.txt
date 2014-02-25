@@ -1,0 +1,15 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: insert into USER_DETAILS (userName) values (?)
+Hibernate: update USER_DETAILS set userName=? where userId=?
+
+
++--------+--------------------+
+| userId | userName           |
++--------+--------------------+
+|      1 | Updated User Again |
++--------+--------------------+
