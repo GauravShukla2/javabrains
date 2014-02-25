@@ -14,7 +14,7 @@ public class Circle implements Shape {
 	public Point getCenter() {
 		return center;
 	}
-	
+
 	@Resource
 	public void setCenter(Point center) {
 		this.center = center;
@@ -27,12 +27,12 @@ public class Circle implements Shape {
 	}
 
 	@PostConstruct
-	public void initializeCircle(){
+	public void initializeCircle() {
 		System.out.println("Init() of Circle");
 	}
-	
+
 	@PreDestroy
-	public void destroyCircle(){
+	public void destroyCircle() {
 		System.out.println("Destroy() of Circle");
 	}
 }
