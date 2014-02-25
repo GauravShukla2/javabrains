@@ -5,13 +5,13 @@ import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle implements ApplicationContextAware,BeanNameAware {
+public class Triangle implements ApplicationContextAware, BeanNameAware {
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
+	@SuppressWarnings("unused")
 	private ApplicationContext context = null;
-	
-	
+
 	public Point getPointA() {
 		return pointA;
 	}
@@ -50,7 +50,7 @@ public class Triangle implements ApplicationContextAware,BeanNameAware {
 
 	@Override
 	public void setBeanName(String beanName) {
-		System.out.println("Bean name is: "+beanName);
-		
+		System.out.println("Bean name is: " + beanName);
+
 	}
 }
