@@ -1,0 +1,24 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: insert into UserDetails (userName, VEHICLE_ID) values (?, ?)
+Hibernate: insert into Vehicle (vehicleName) values (?)
+Hibernate: update UserDetails set userName=?, VEHICLE_ID=? where userId=?
+
+
++--------+------------+------------+
+| userId | userName   | VEHICLE_ID |
++--------+------------+------------+
+|      1 | First User |          1 |
++--------+------------+------------+
+
+
++-----------+-------------+
+| vehicleId | vehicleName |
++-----------+-------------+
+|         1 | Car         |
++-----------+-------------+
+
