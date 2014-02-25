@@ -1,0 +1,5 @@
+InitializingBean init() method called for Triangle
+Point A = (0, 20)
+Point B = (-20, 0)
+Point C = (20, 0)
+DisposableBean destroy() method called
