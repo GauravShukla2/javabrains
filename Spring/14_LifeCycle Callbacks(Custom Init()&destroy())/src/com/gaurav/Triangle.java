@@ -1,14 +1,10 @@
 package com.gaurav;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-
-
-public class Triangle{
+public class Triangle {
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
-	
+
 	public Point getPointA() {
 		return pointA;
 	}
@@ -33,7 +29,6 @@ public class Triangle{
 		this.pointC = pointC;
 	}
 
-
 	public void draw() {
 		System.out.println("Point A = (" + getPointA().getX() + ", " + getPointA().getY() + ")");
 		System.out.println("Point B = (" + getPointB().getX() + ", " + getPointB().getY() + ")");
@@ -42,21 +37,11 @@ public class Triangle{
 
 	public void myInit() throws Exception {
 		System.out.println("myInit() method called for Triangle");
-		
+
 	}
 
 	public void cleanUp() throws Exception {
 		System.out.println("cleanUp() method called for Triangle");
 	}
-	
-/*	@Override
-	public void afterPropertiesSet() throws Exception {
-		System.out.println("InitializingBean inti() method called for Triangle");
-		
-	}
 
-	@Override
-	public void destroy() throws Exception {
-		System.out.println("DisposableBean destroy() method called");
-	}*/
 }
