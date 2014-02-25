@@ -1,0 +1,24 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: select userdetail0_.userId as userId0_, userdetail0_.userName as userName0_ from USER_DETAILS userdetail0_ where userdetail0_.userId>5
+size of list: 6
+
++--------+-----------------------------------+
+| userId | userName                          |
++--------+-----------------------------------+
+|      1 | User 0                            |
+|      2 | User 1                            |
+|      3 | User 2                            |
+|      4 | User 3                            |
+|      5 | User 4                            |
+|      6 | User 5                            |
+|      7 | User 6                            |
+|      8 | User 7                            |
+|      9 | User 8                            |
+|     10 | User 9                            |
+|     11 | User 10                           |
++--------+-----------------------------------+
