@@ -1,0 +1,8 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: select this_.userId as userId0_0_, this_.userName as userName0_0_ from USER_DETAILS this_ where this_.userName=?
+User 10
