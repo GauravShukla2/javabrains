@@ -1,0 +1,11 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: select userdetail0_.userId as userId0_, userdetail0_.userName as userName0_ from USER_DETAILS userdetail0_ limit ?, ?
+User 6
+User 7
+User 8
+User 9
