@@ -1,0 +1,38 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: insert into UserDetails (userName) values (?)
+Hibernate: insert into Vehicle (vehicleName) values (?)
+Hibernate: insert into Vehicle (vehicleName) values (?)
+Hibernate: insert into UserDetails_Vehicle (UserDetails_userId, vehicle_vehicleId) values (?, ?)
+Hibernate: insert into UserDetails_Vehicle (UserDetails_userId, vehicle_vehicleId) values (?, ?)
+
+
++--------+------------+
+| userId | userName   |
++--------+------------+
+|      1 | First User |
++--------+------------+
+
+
++-----------+-------------+
+| vehicleId | vehicleName |
++-----------+-------------+
+|         1 | Car         |
+|         2 | Jeep        |
++-----------+-------------+
+
+
++--------------------+-------------------+
+| UserDetails_userId | vehicle_vehicleId |
++--------------------+-------------------+
+|                  1 |                 1 |
+|                  1 |                 2 |
++--------------------+-------------------+
+
+
+
+
