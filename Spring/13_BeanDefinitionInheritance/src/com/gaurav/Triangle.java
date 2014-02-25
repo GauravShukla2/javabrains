@@ -1,11 +1,10 @@
 package com.gaurav;
 
-public class Triangle{
+public class Triangle {
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
-	
-	
+
 	public Point getPointA() {
 		return pointA;
 	}
