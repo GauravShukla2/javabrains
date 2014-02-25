@@ -1,0 +1,41 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: alter table USER_ADDRESS drop foreign key FK_rr7b0tc5khp6fevg5vf9ctn5
+Hibernate: drop table if exists USER_ADDRESS
+Hibernate: drop table if exists UserDetails
+Hibernate: drop table if exists hibernate_unique_key
+Hibernate: create table USER_ADDRESS (USER_ID integer not null, CITY_NAME varchar(255), PIN_CODE varchar(255), STATE_NAME varchar(255), STREET_NAME varchar(255), ADDRESS_ID bigint not null, primary key (ADDRESS_ID))
+Hibernate: create table UserDetails (userId integer not null auto_increment, userName varchar(255), primary key (userId))
+Hibernate: alter table USER_ADDRESS add index FK_rr7b0tc5khp6fevg5vf9ctn5 (USER_ID), add constraint FK_rr7b0tc5khp6fevg5vf9ctn5 foreign key (USER_ID) references UserDetails (userId)
+Hibernate: create table hibernate_unique_key ( next_hi integer )
+Hibernate: insert into hibernate_unique_key values ( 0 )
+Hibernate: insert into UserDetails (userName) values (?)
+Hibernate: select next_hi from hibernate_unique_key for update
+Hibernate: update hibernate_unique_key set next_hi = ? where next_hi = ?
+Hibernate: insert into USER_ADDRESS (USER_ID, ADDRESS_ID, CITY_NAME, PIN_CODE, STATE_NAME, STREET_NAME) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into USER_ADDRESS (USER_ID, ADDRESS_ID, CITY_NAME, PIN_CODE, STATE_NAME, STREET_NAME) values (?, ?, ?, ?, ?, ?)
+
+
++--------+------------+
+| userId | userName   |
++--------+------------+
+|      1 | First User |
++--------+------------+
+
+
++---------+-----------+----------+------------+-------------+------------+
+| USER_ID | CITY_NAME | PIN_CODE | STATE_NAME | STREET_NAME | ADDRESS_ID |
++---------+-----------+----------+------------+-------------+------------+
+|       1 | Hyderabad | 500084   | AP         | NULL        |          1 |
+|       1 | Bangalore | 560068   | KA         | NULL        |          2 |
++---------+-----------+----------+------------+-------------+------------+
+
++---------+
+| next_hi |
++---------+
+|       1 |
++---------+
