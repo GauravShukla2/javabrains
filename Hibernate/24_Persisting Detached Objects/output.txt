@@ -1,0 +1,16 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: select userdetail0_.userId as userId0_0_, userdetail0_.userName as userName0_0_ from USER_DETAILS userdetail0_ where userdetail0_.userId=?
+Hibernate: select userdetail_.userId, userdetail_.userName as userName0_ from USER_DETAILS userdetail_ where userdetail_.userId=?
+Hibernate: update USER_DETAILS set userName=? where userId=?
+
+2.
+
+Hibernate: select userdetail0_.userId as userId0_0_, userdetail0_.userName as userName0_0_ from USER_DETAILS userdetail0_ where userdetail0_.userId=?
+Hibernate: select userdetail_.userId, userdetail_.userName as userName0_ from USER_DETAILS userdetail_ where userdetail_.userId=?
+
+
