@@ -1,0 +1,18 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: drop table if exists UserDetails
+Hibernate: create table UserDetails (userId integer not null, address varchar(255), description varchar(255), joinedDate datetime, userName varchar(255), primary key (userId))
+Hibernate: insert into UserDetails (address, description, joinedDate, userName, userId) values (?, ?, ?, ?, ?)
+Hibernate: select userdetail0_.userId as userId1_0_0_, userdetail0_.address as address2_0_0_, userdetail0_.description as descript3_0_0_, userdetail0_.joinedDate as joinedDa4_0_0_, userdetail0_.userName as userName5_0_0_ from UserDetails userdetail0_ where userdetail0_.userId=?
+1	First User	Hyderabad
+
+
++--------+-----------+---------------------+---------------------+------------+
+| userId | address   | description         | joinedDate          | userName   |
++--------+-----------+---------------------+---------------------+------------+
+|      1 | Hyderabad | This is description | 2014-02-22 21:43:05 | First User |
++--------+-----------+---------------------+---------------------+------------+
