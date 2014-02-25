@@ -24,7 +24,7 @@ public class Circle implements Shape {
 	public Point getCenter() {
 		return center;
 	}
-	
+
 	@Resource
 	public void setCenter(Point center) {
 		this.center = center;
@@ -33,7 +33,8 @@ public class Circle implements Shape {
 	public void draw() {
 
 		System.out.println(this.messageSource.getMessage("drawing.circle", null, "Default Drawing Message", null));
-		System.out.println(this.messageSource.getMessage("drawing.point", new Object[] {center.getX(),center.getY()}, "Default Point Message", null));
+		System.out.println(this.messageSource.getMessage("drawing.point",
+				new Object[] { center.getX(), center.getY() }, "Default Point Message", null));
 		System.out.println(this.messageSource.getMessage("greeting", null, "Default Greeting", null));
 	}
 

@@ -10,7 +10,7 @@ public class DrawingApp {
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		Shape shape = (Shape) context.getBean("circle");
 		shape.draw();
-		System.out.println(context.getMessage("hello.spring", null, "Default Greeting", null));
+		System.out.println("In DrawingApp: "+context.getMessage("hello.spring", null, "Default Greeting", null));
 
 	}
 }
