@@ -1,0 +1,8 @@
+drop database hibernatedb;
+create database hibernatedb;
+
+
+o/p:
+
+Hibernate: select this_.userId as userId0_0_, this_.userName as userName0_0_ from USER_DETAILS this_ where this_.userName like ? and this_.userId between ? and ? and (this_.userId between ? and ? or this_.userId between ? and ?)
+User 10
