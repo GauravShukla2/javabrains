@@ -9,31 +9,29 @@ import com.gaurav.aop.model.Circle;
 
 @Aspect
 public class LoggingAspect {
-	
 
 	@Before("allCircleMethods()")
-	public void loggingAdvice0(JoinPoint joinPoint){
-		Circle c = (Circle)joinPoint.getTarget();
-		System.out.println("Name: "+c.getName());
+	public void loggingAdvice0(JoinPoint joinPoint) {
+		Circle c = (Circle) joinPoint.getTarget();
+		System.out.println("Name: " + c.getName());
 	}
-	
+
 	@Before("allCircleMethods()")
-	public void loggingAdvice(JoinPoint joinPoint){
+	public void loggingAdvice(JoinPoint joinPoint) {
 		System.out.println(joinPoint.toString());
 	}
-	
+
 	@Before("args(name)")
-	public void stringArgumentMethod(String name){
-		System.out.println("A method that takes String argument has been called. Value is "+name);
+	public void stringArgumentMethod(String name) {
+		System.out.println("A method that takes String argument has been called. Value is " + name);
 	}
-	
-	
-	
+
 	@Pointcut("execution(* get*())")
-	public void allGetters(){}
-	
+	public void allGetters() {
+	}
+
 	@Pointcut("within(com.gaurav.aop.model.Circle)")
-	public void allCircleMethods(){}
-	
-	
+	public void allCircleMethods() {
+	}
+
 }
