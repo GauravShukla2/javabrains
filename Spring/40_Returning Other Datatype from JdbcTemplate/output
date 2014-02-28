@@ -1,0 +1,13 @@
+drop database db;
+create database db;
+use db;
+create table circle(id int, name char(50));
+insert into circle values(1,'First Circle');
+insert into circle values(2,'Second Circle');
+select * from circle;
+
+
+o/p:
+First Circle
+2	Second Circle
+2
