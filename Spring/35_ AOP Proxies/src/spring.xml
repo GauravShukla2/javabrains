@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+				http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<context:annotation-config />
+
+	<aop:aspectj-autoproxy />
+
+	<bean name="triangle" class="com.gaurav.aop.model.Triangle">
+		<property name="name" value="Triangle name"></property>
+	</bean>
+
+	<bean name="circle" class="com.gaurav.aop.model.Circle">
+		<property name="name" value="Circle name"></property>
+	</bean>
+
+	<bean name="loggingAspect" class="com.gaurav.aop.aspect.LoggingAspect" />
+
+	<bean name="shapeService" class="com.gaurav.aop.service.ShapeService"
+		autowire="byName" />
+
+	<aop:config>
+		<aop:aspect id="loggingAspect" ref="loggingAspect">
+			<!-- 1. -->
+			<!-- <aop:around method="myAroundAdvice" pointcut-ref="allGetters"/> <aop:pointcut 
+				expression="execution(* get*())" id="allGetters"/> -->
+			<!-- 2. -->
+			<aop:around method="myAroundAdvice" pointcut="execution(* get*())" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>
