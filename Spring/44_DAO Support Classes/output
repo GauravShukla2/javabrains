@@ -1,0 +1,10 @@
+drop database db;
+create database db;
+use db;
+create table circle(id int, name char(50));
+insert into circle values(1,'First Circle');
+select * from circle;
+
+
+o/p:
+6
